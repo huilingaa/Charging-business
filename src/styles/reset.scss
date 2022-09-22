@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+ol,li {
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #13131d;
+  // font-family: -apple-system,Helvetica,sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+  // font-family: "PingFang SC", miui, system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+  font-family: -apple-system,Droid Sans，Helvetica Neue，sans-serif, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+  // 去除默认填充色
+  input:-webkit-autofill {
+    -webkit-animation: autofill-fix 1s infinite;
+  }
+
+  @-webkit-keyframes autofill-fix {
+    from {
+      background-color: transparent;
+    }
+    to {
+      background-color: transparent;
+    }
+  }
+
+// 清除浮动
+.clearfix {
+  zoom: 1;
+  &:after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+  }
+}
+
+// 导入字体
+@font-face {
+  font-family: DIN-Medium;
+  src: url('@/static/font/DIN-Medium.otf');
+}
+@font-face {
+  font-family: DIN-Bold;
+  src: url('@/static/font/DIN-Bold.otf');
+}
+@font-face {
+  font-family: DIN-Regular;
+  src: url('@/static/font/DIN-Regular.otf');
+}
+
+uni-tabbar .uni-tabbar-border {
+  height: 0;
+}
+
+uni-tabbar .uni-tabbar__icon {
+  width: 22px;
+  height: 22px;
+}
+
+uni-toast .uni-simple-toast__text {
+  // background: rgba(99,113,146,0.50);
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  color: #e1e6ea;
+}
+
+
+
+// uni-toast .uni-sample-toast {
+uni-toast .uni-sample-toast {
+  background: rgba(99,113,146,0.50);
+}
+
+
+// 一像素边框
+[class*=hairline]::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    border: 0 solid #262c40;
+    -webkit-transform: scale(.5);
+    transform: scale(.5)
+}
+
+.hairline, .hairline--bottom, .hairline--left, .hairline--right, .hairline--surround,.hairline--radius, .hairline--top, .hairline--top-bottom {
+    position: relative
+}
+
+.hairline--top::after {
+    border-top-width: 1px
+}
+
+.hairline--left::after {
+    border-left-width: 1px
+}
+
+.hairline--right::after {
+    border-right-width: 1px
+}
+
+.hairline--bottom::after {
+    border-bottom-width: 1px
+}
+// 一像素边框上下边框
+.hairline--top-bottom::after, .hairline-unset--top-bottom::after {
+    border-width: 1px 0
+}
+// 全边框一像素边框
+.hairline--surround::after {
+    border-width: 1px;
+}
+// 圆角一像素边框
+.hairline--radius::after {
+  border-width: 1px;
+  border-radius: 1000rpx;
+}
+.uni-textarea-textarea{
+  word-wrap: normal;
+  word-break: break-word!important;
+}

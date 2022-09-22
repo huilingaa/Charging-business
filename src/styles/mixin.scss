@@ -1,0 +1,38 @@
+// 文字超出。。。
+@mixin no-wrap() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// 多行超出。。。
+@mixin no-wrap-line($line: 2) {
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+// 扩充点击区域
+@mixin extend-click($px: 5px) {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -$px;
+    left: -$px;
+    right: -$px;
+    bottom: -$px;
+  }
+}
+
+// 文字渐变
+@mixin text-gradual($direction: right, $color: '#6C68FC,#58C2FF,#1693DB') {
+  background-image: -webkit-linear-gradient(right, #6c68fc, #58c2ff, #1693db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// 一像素边框
